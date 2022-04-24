@@ -1,0 +1,35 @@
+Mini-Max Sum
+
+#include <iostream>
+using namespace std;
+int main() {
+    int n = 5;
+    long max_sum = 0,min_sum = 0;
+    // cin >> n;
+    int arra[n];
+    for(int i = 0;i<n;i++){
+        cin >> arra[i];
+    }
+
+    for(int i = 0;i<n;i++){
+        int small = arra[i];
+        for(int j = i;j<n;j++){
+            if(small > arra[j]){
+                arra[i] = arra[j];
+                arra[j] = small;
+                small = arra[i];
+            }
+        }
+    }
+    
+    for(int i = 0;i<(n-1);i++){
+        min_sum += arra[i];
+    }
+
+    for(int i = 1;i<n;i++){
+        max_sum += arra[i];
+    }
+
+    cout << min_sum << " " << max_sum;
+
+}
