@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+int main() {
+    int s,t,a,b,m,n,app = 0,org = 0;
+    scanf("%d%d%d%d%d%d",&s,&t,&a,&b,&m,&n);
+    // cout << "s = " << s << "\nt = " << t;
+    int apple[m],orange[n];
+    for(int i = 0;i < m;i++){
+        cin >> apple[i];
+        apple[i] += a;
+        // cout << "apple = " << apple[i] << "\n";
+        if(apple[i] >= s && apple[i] <= t){
+            app ++;
+        }
+    }
+    for(int j = 0;j < n;j++){
+        cin >> orange[j];
+        orange[j] += b;
+        if(orange[j] >= s && orange[j] <= t){
+            org ++;
+        }
+    }
+
+    cout << app << "\n" << org;
+
+}

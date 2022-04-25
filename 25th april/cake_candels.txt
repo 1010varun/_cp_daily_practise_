@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+int main() {
+    int n,greatest = 0,candel = 0;
+    cin >> n;
+    int arra[n];
+    for(int i = 0;i<n;i++){
+        cin >> arra[i];
+        if(arra[i]>greatest){
+            greatest = arra[i];
+        }
+    }
+    for(int i = 0;i<n;i++){
+        if(arra[i] == greatest){
+            candel += 1;
+        }
+    }
+    cout << candel;
+}

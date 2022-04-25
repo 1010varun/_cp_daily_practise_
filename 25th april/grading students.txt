@@ -1,0 +1,39 @@
+#include <iostream>
+using namespace std;
+
+int check(int n,int gra){
+    int a = gra;
+    if(n<3){
+        if(a%5 == 0){
+            return a;
+        }
+        else{
+            a ++;
+            n++;
+            return check(n,a);
+        }
+    }
+    else{
+        return -1;
+    }
+}
+
+int main() {
+    int i,grade = 0;
+    cin >> i;
+    int arra[i];
+    for(int a = 0;a<i;a++){
+        cin >> arra[a];
+        grade = check(0,arra[a]);
+        // cout << "grade = " << grade << "\n";
+        if(grade < 0){
+            cout << arra[a] << "\n";
+        }
+        else if(grade > 39){
+            cout << grade << "\n";
+        }
+        else{
+            cout << arra[a] << "\n";
+        }
+    }
+}
