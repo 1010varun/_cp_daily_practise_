@@ -1,0 +1,28 @@
+#include <iostream>
+using namespace std;
+int main() {
+    int n,l_dig = 0,r_dig = 0;
+    cin>>n;
+    int arra[n][n];
+    for(int i = 0;i<n;i++){
+        for(int j = 0;j<n;j++){
+            cin>>arra[i][j];
+            if(i == j){
+                l_dig += arra[i][j];
+            }
+        }
+    }
+
+    for(int i = 0;i<n;i++){
+        for(int j = 0;j<n;j++){
+            if((i+j) == (n-1)){
+                r_dig += arra[i][j];
+            }
+        }
+    }
+    // cout << "\n" << arra[1][1];
+    // cout << n-1;
+    // cout << "\nleft = " << l_dig;
+    // cout << "right = " << r_dig;
+    cout << (abs(l_dig - r_dig));
+}

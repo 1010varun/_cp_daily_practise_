@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+int main() {
+    int n,greatest = 0,lowest = 0,g = 0,l = 0;
+    cin >> n;
+    int arra[n];
+    for(int i = 0;i<n;i++){
+        cin >> arra[i];
+    }
+    l = arra[0];
+    g = arra[0];
+    for(int i = 0;i<n;i++){
+        if(arra[i] > g){
+            greatest ++ ;
+            g = arra[i];
+        }
+        else if(arra[i] < l){
+            lowest ++ ;
+            l = arra[i];
+        }
+    }
+    cout << greatest << " " << lowest;
+}
