@@ -1,0 +1,16 @@
+#include <iostream>
+#include<cstring>
+using namespace std;
+int main() {
+    int hh,mm,ss;
+    char ts[3],sc1,sc2;
+    cin >> hh >> sc1 >> mm >> sc2 >> ss >> ts;
+    // cout << typeof(ts);
+    if(strcmp(ts,"PM") == 0 && hh != 12)hh += 12;
+    else if(strcmp(ts,"AM") == 0 && hh == 12)hh = 00;
+
+    printf("%02d:%02d:%02d", hh, mm, ss) ;
+    
+
+
+}

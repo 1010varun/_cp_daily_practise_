@@ -1,0 +1,32 @@
+#include <iostream>
+using namespace std;
+int main() {
+    int no_pages,page,flast = 0,fstart = 0;
+    cin >> no_pages >> page;
+    if(no_pages%2 == 0){
+        for(int i = no_pages;i>=(page-1);i-=2){
+            flast ++;
+        }
+        for(int i = 1;i<=(page+1);i+=2){
+            fstart ++;
+        }
+    }
+
+    else if(no_pages%2 != 0){
+        for(int i = no_pages;i>=(page);i-=2){
+            flast ++;
+        }
+        for(int i = 1;i<=(page);i+=2){
+            fstart ++;
+        }
+    }
+
+    // cout << flast << fstart;
+    if(flast>fstart){
+        cout << fstart-1;
+    }
+    else{
+        cout << flast-1;
+    }
+
+}
