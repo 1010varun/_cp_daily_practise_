@@ -1,0 +1,11 @@
+#include <iostream>
+using namespace std;
+int main() {
+    int t;
+    cin >> t;
+    while(t--){
+        long int n,m,s,l = 0;
+        cin >> n >> m >> s;
+        cout << (((s+m-2)%n)+1) << "\n";
+    }
+}
