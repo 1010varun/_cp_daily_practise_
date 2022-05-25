@@ -1,0 +1,17 @@
+#include<iostream>
+using namespace std;
+int main(){
+    int t;
+    cin >> t;
+    while(t--){
+        int n,a = 0,h = 1;
+        cin >> n;
+        // cout <<n;
+        while(a < n){
+            if(a%2 == 0)h *= 2;
+            else h++;
+            a ++;
+        }
+        cout << h << endl;
+    }
+}

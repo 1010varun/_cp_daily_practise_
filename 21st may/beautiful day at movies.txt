@@ -1,0 +1,24 @@
+#include<iostream>
+#include<cstdlib>
+using namespace std;
+
+int reverse(int num){
+    int rever = 0;
+    while(num != 0){
+        rever  = (rever*10)+(num%10);
+        num /= 10;
+    }
+    return rever;
+}
+
+
+int main(){
+    int a,b,k,reverse_num,diff,total = 0;
+    cin >> a >> b >> k;
+    for(int i = a;i<=b;i++){
+        reverse_num = reverse(i);
+        diff = abs(i-reverse_num);
+        if(diff%k == 0)total ++; 
+    }
+    cout << total;
+}

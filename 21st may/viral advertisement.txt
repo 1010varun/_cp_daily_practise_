@@ -1,0 +1,14 @@
+#include <iostream>
+using namespace std;
+int main() {
+    int n,cmu = 0,liked = 0,shared = 5;
+    cin >> n;
+    int i=1;
+    while(i <= n){
+        liked = shared/2;
+        cmu += liked;
+        shared = liked*3;
+        i ++;
+    }
+    cout << cmu;
+}
