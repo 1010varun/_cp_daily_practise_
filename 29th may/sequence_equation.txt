@@ -1,0 +1,32 @@
+#include <iostream>
+using namespace std;
+
+int position(int arr[],int n,int k){
+    int j = 0,pos,l = k;
+    while(j < 2){
+        for(int i = 0;i < n;i ++){
+            if(arr[i] == l){
+                l = i+1;
+                pos = i;
+                break;
+            }
+        }
+        j++;
+    }
+    return pos;
+}
+
+int main() {
+    int n,k = 1;
+    cin >> n;
+    int arr[n];
+    for(int i = 0;i<n;i++){
+        cin >> arr[i];
+    }
+    while(k <= n){
+        int pos = position(arr,n,k);
+        cout << pos+1 << endl;
+        k++;
+    }
+
+}
