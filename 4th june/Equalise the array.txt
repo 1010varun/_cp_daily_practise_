@@ -1,0 +1,22 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int n,deletion = 0,a = 0,deleted = 100;
+    cin >> n;
+    int arr[n],arr_delete[n] = {0};
+    for(int i = 0;i<n;i++)cin >> arr[i];
+    
+    for(int i = 0;i <n;i++){
+        for(int j = 0;j<n;j++)if(arr[i] != arr[j] && j!=i)deletion ++;
+        arr_delete[a] = deletion;
+        a++;
+        deletion = 0;
+    }
+    
+    for(int i = 0;i<n;i++)if(arr_delete[i] < deleted)deleted = arr_delete[i];
+    cout << deleted;
+    return 0;
+}
